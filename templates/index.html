@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticias</title>
+<style>
+@media screen and (max-width: 800px) {
+body{font-size: 16px};
+}
+
+@media screen and (min-width: 801px) {
+body{font-size: 19px};
+}
+body{
+background-color: black;
+color:white;
+font-family: Calibri;
+
+}
+
+a{
+text-decoration: none;
+color:#00baff;
+}
+</style>
+</head>
+<body>
+<h1>Noticias En La Actualidad</h1>
+<ul>
+{% for linea in noticias %}
+<li>{{ linea | safe }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
